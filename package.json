@@ -1,0 +1,52 @@
+{
+  "name": "Morphosis",
+	"displayName": "Syncronizing Gitflow/BitBucket and Harvest timetracking with Jira Tickets",
+	"description": "Using Harvest to automatically start timetrack Jira issues where the time entry is started with the right ticketnumber so it matches both the JIRA ticketid and the git branch name and is clickable, and can sync, within both atalassian and Harvest Products.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onCommand:morph.helloWorld"
+
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "morph.helloWorld",
+				"title": "Hello World"
+			}
+
+		]
+	},
+	
+
+
+
+	
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
